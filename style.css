@@ -1,0 +1,522 @@
+/* CSS Cyber-Nusantara: Futuristic Crimson & Ivory White */
+:root {
+    --bg-dark: #0d0406;
+    --crimson-light: #ff1744;
+    --crimson-neon: #ff2a55;
+    --crimson-glow: rgba(255, 23, 68, 0.6);
+    --ivory-white: #f8f9fa;
+    --ivory-muted: #c5c8cf;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 23, 68, 0.35);
+    --neon-shadow: 0 0 20px rgba(255, 23, 68, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--ivory-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Effects: Holographic Grid & Ambient Glow */
+.ambient-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-crimson {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--crimson-glow) 0%, transparent 70%);
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pulseGlow 8s infinite alternate ease-in-out;
+}
+
+.glow-ivory {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(248, 249, 250, 0.1) 0%, transparent 70%);
+    bottom: -100px;
+    right: -100px;
+}
+
+@keyframes pulseGlow {
+    0% { opacity: 0.4; transform: translateX(-50%) scale(0.9); }
+    100% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
+}
+
+/* Holographic Cyber Grid Overlay */
+.batik-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: 
+        linear-gradient(rgba(255, 23, 68, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 23, 68, 0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Audio Control Button (Floating Cyber Badge) */
+.audio-control-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99;
+}
+
+.audio-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(13, 4, 6, 0.85);
+    border: 1px solid var(--crimson-light);
+    color: var(--ivory-white);
+    padding: 12px 22px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    backdrop-filter: blur(16px);
+    box-shadow: var(--neon-shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.audio-btn:hover {
+    background: var(--crimson-light);
+    color: #ffffff;
+    box-shadow: 0 0 30px var(--crimson-light);
+    transform: translateY(-2px);
+}
+
+/* Header Section */
+.hero-header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.badge-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--crimson-neon);
+    background: rgba(255, 23, 68, 0.1);
+    border: 1px solid var(--crimson-light);
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    box-shadow: 0 0 10px rgba(255, 23, 68, 0.2);
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+.nusantara-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: 3px;
+    color: var(--ivory-white);
+    text-shadow: 0 0 20px rgba(255, 23, 68, 0.8), 0 0 40px rgba(255, 23, 68, 0.3);
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--ivory-muted);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* Main Container Layout */
+.main-container {
+    position: relative;
+    z-index: 1;
+    max-width: 950px;
+    width: 92%;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Cyber Glassmorphism Card Styling */
+.nusantara-card {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 45px 35px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.nusantara-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 23, 68, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.nusantara-card:hover {
+    border-color: var(--crimson-neon);
+    box-shadow: var(--neon-shadow), 0 25px 60px rgba(0, 0, 0, 0.9);
+    transform: translateY(-4px);
+}
+
+.card-crimson-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--crimson-neon), transparent);
+}
+
+.section-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--ivory-white);
+    text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+    margin-bottom: 35px;
+}
+
+/* Timer Grid */
+.timer-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-number-wrapper {
+    background: rgba(13, 4, 6, 0.9);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 22px 26px;
+    min-width: 110px;
+    text-align: center;
+    box-shadow: inset 0 0 15px rgba(255, 23, 68, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.timer-number-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: cyberScan 4s infinite;
+}
+
+@keyframes cyberScan {
+    0% { left: -100%; }
+    30%, 100% { left: 100%; }
+}
+
+.timer-num {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--crimson-neon);
+    text-shadow: 0 0 15px var(--crimson-glow);
+}
+
+.timer-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--ivory-muted);
+    margin-top: 14px;
+}
+
+.timer-divider {
+    font-size: 1.8rem;
+    color: var(--crimson-neon);
+    text-shadow: 0 0 10px var(--crimson-glow);
+    margin-bottom: 24px;
+}
+
+/* Map SVG */
+.map-container {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.indonesia-map-svg {
+    width: 100%;
+    max-height: 320px;
+    filter: drop-shadow(0 0 20px rgba(255, 23, 68, 0.6));
+}
+
+.map-caption {
+    text-align: center;
+    color: var(--ivory-muted);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+/* Culture Grid */
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.culture-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.culture-item:hover {
+    background: rgba(255, 23, 68, 0.08);
+    border-color: var(--crimson-neon);
+    transform: translateY(-6px);
+    box-shadow: var(--neon-shadow);
+}
+
+.culture-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    border: 1px solid var(--glass-border);
+}
+
+.culture-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.culture-item:hover .culture-img {
+    transform: scale(1.1);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 30%, rgba(13, 4, 6, 0.95) 100%);
+}
+
+.culture-item h3 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.95rem;
+    color: var(--ivory-white);
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px rgba(255, 23, 68, 0.4);
+}
+
+.culture-item p {
+    font-size: 0.8rem;
+    color: var(--ivory-muted);
+    line-height: 1.6;
+}
+
+/* Footer */
+.nusantara-footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 35px;
+    margin-top: auto;
+    border-top: 1px solid var(--glass-border);
+    background: rgba(13, 4, 6, 0.95);
+    color: var(--ivory-muted);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .timer-divider {
+        display: none;
+    }
+    .timer-grid {
+        gap: 12px;
+    }
+    .timer-number-wrapper {
+        min-width: 80px;
+        padding: 16px 18px;
+    }
+    .audio-control-container {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Styling Tabel HUT RI Futuristik */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+}
+
+.hut-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.hut-table th {
+    background: rgba(255, 23, 68, 0.15);
+    color: var(--ivory-white);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.hut-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255, 23, 68, 0.1);
+    color: var(--ivory-muted);
+}
+
+.hut-table tbody tr {
+    transition: background 0.3s ease;
+}
+
+.hut-table tbody tr:hover {
+    background: rgba(255, 23, 68, 0.05);
+}
+
+.hut-table tbody tr.highlight-row {
+    background: rgba(255, 23, 68, 0.12);
+}
+
+.hut-table tbody tr.highlight-row td {
+    color: var(--ivory-white);
+    font-weight: 600;
+}
+
+.badge-year {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--ivory-white);
+}
+
+.badge-year.active {
+    background: var(--crimson-light);
+    color: #ffffff;
+    border-color: var(--crimson-neon);
+    box-shadow: 0 0 10px var(--crimson-glow);
+}
+
+/* Styling Fitur Twibbon */
+/* Styling Fitur Twibbon & Preview */
+.twibbon-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.twibbon-preview-wrapper {
+    width: 100%;
+    max-width: 480px;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(13, 4, 6, 0.6);
+}
+
+.twibbon-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.twibbon-description {
+    color: var(--ivory-muted);
+    font-size: 0.95rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.twibbon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--crimson-light), #d90429);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    box-shadow: var(--neon-shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.twibbon-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 30px var(--crimson-neon);
+    background: linear-gradient(135deg, var(--crimson-neon), var(--crimson-light));
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirgahayu Republik Indonesia - Crimson & Ivory</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Cinzel Decorative & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Ambient Glow Crimson Light & Soft Ivory -->
+    <div class="ambient-glow glow-crimson"></div>
+    <div class="ambient-glow glow-ivory"></div>
+    <div class="batik-overlay"></div>
+
+    <!-- Pemutar Audio Melayang (Audio Player) -->
+    <div class="audio-control-container">
+        <button id="audioToggleBtn" class="audio-btn" aria-label="Putar Musik">
+            <span id="audioIcon">🎵</span>
+            <span id="audioText">Putar "Iqro" - Raim Laode</span>
+        </button>
+        <audio id="bgAudio" loop preload="metadata">
+            <source src="audio/iqro.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung elemen audio.
+        </audio>
+    </div>
+
+    <header class="hero-header">
+        <div class="badge-tag">PORTAL NUSANTARA MERAH PUTIH</div>
+        <h1 class="nusantara-title">DIRGAHAYU REPUBLIK INDONESIA</h1>
+        <p class="subtitle" id="hut-title">Nusantara Emas • 17 Agustus</p>
+    </header>
+
+    <main class="main-container">
+
+        <!-- Countdown Card -->
+        <section class="nusantara-card countdown-card">
+            <div class="card-crimson-accent"></div>
+            <h2 id="countdown-heading" class="section-title">HITUNG MUNDUR HARI KEMERDEKAAN</h2>
+            
+            <div id="timer" class="timer-grid">
+                <div class="timer-box">
+                    <div class="timer-number-wrapper">
+                        <span id="days" class="timer-num">00</span>
+                    </div>
+                    <label class="timer-label">HARI</label>
+                </div>
+                <div class="timer-divider">•</div>
+                <div class="timer-box">
+                    <div class="timer-number-wrapper">
+                        <span id="hours" class="timer-num">00</span>
+                    </div>
+                    <label class="timer-label">JAM</label>
+                </div>
+                <div class="timer-divider">•</div>
+                <div class="timer-box">
+                    <div class="timer-number-wrapper">
+                        <span id="minutes" class="timer-num">00</span>
+                    </div>
+                    <label class="timer-label">MENIT</label>
+                </div>
+                <div class="timer-divider">•</div>
+                <div class="timer-box">
+                    <div class="timer-number-wrapper">
+                        <span id="seconds" class="timer-num">00</span>
+                    </div>
+                    <label class="timer-label">DETIK</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- FITUR TWIBBON DENGAN PREVIEW -->
+<section class="nusantara-card twibbon-card">
+    <div class="card-crimson-accent"></div>
+    <h2 class="section-title">TWIBBON KEMERDEKAAN RI</h2>
+    
+    <div class="twibbon-content">
+        <!-- Container Preview Frame / Iframe -->
+        <div class="twibbon-preview-wrapper">
+            <iframe 
+                src="https://twb.nz/reviewsteknologiku-tech-idn-11" 
+                title="Preview Twibbon Kemerdekaan RI"
+                class="twibbon-iframe"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <p class="twibbon-description">
+            Semarakkan Hari Kemerdekaan Republik Indonesia dengan memasang bingkai foto profil Twibbon resmi Nusantara Emas!
+        </p>
+        
+        <a href="https://twb.nz/reviewsteknologiku-tech-idn-11" target="_blank" rel="noopener noreferrer" class="twibbon-btn">
+            🖼️ Buka & Pasang Twibbon
+        </a>
+    </div>
+</section>
+
+        <!-- Peta Indonesia Section -->
+        <section class="nusantara-card map-card">
+            <div class="card-crimson-accent"></div>
+            <h2 class="section-title">ARCHIPELAGO NUSANTARA</h2>
+            <div class="map-container">
+                <svg viewBox="0 0 1000 420" class="indonesia-map-svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                        <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ff1e42" />
+                            <stop offset="100%" stop-color="#d90429" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <path d="M 120 180 Q 250 160 380 260 T 600 240 T 880 220" stroke="rgba(255, 30, 66, 0.4)" stroke-width="1.5" fill="none" stroke-dasharray="4,4"/>
+                    <path d="M 220 220 Q 420 300 650 280 T 920 260" stroke="rgba(248, 246, 240, 0.3)" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+
+                    <path d="M 80 120 L 160 180 L 260 260 L 210 290 L 140 230 L 70 140 Z" fill="url(#crimsonGrad)" filter="url(#glow)"/>
+                    <path d="M 270 300 L 360 305 L 430 310 L 480 300 L 470 315 L 360 320 L 265 310 Z" fill="url(#crimsonGrad)" filter="url(#glow)"/>
+                    <path d="M 320 160 L 410 150 L 450 200 L 420 250 L 340 250 L 310 200 Z" fill="url(#crimsonGrad)" filter="url(#glow)"/>
+                    <path d="M 490 170 L 530 170 L 520 210 L 560 210 L 530 240 L 510 280 L 480 230 Z" fill="url(#crimsonGrad)" filter="url(#glow)"/>
+                    <path d="M 495 312 L 530 312 L 580 315 L 630 312 L 625 320 L 530 320 Z" fill="url(#crimsonGrad)" filter="url(#glow)"/>
+                    <path d="M 600 190 L 630 200 L 610 240 L 590 220 Z" fill="url(#crimsonGrad)" filter="url(#glow)"/>
+                    <path d="M 700 200 L 800 200 L 880 230 L 880 290 L 780 280 L 720 250 Z" fill="url(#crimsonGrad)" filter="url(#glow)"/>
+
+                    <circle cx="160" cy="180" r="5" fill="#f8f6f0" filter="url(#glow)"/>
+                    <circle cx="360" cy="310" r="6" fill="#f8f6f0" filter="url(#glow)"/>
+                    <circle cx="380" cy="200" r="5" fill="#f8f6f0" filter="url(#glow)"/>
+                    <circle cx="510" cy="230" r="5" fill="#f8f6f0" filter="url(#glow)"/>
+                    <circle cx="800" cy="240" r="6" fill="#f8f6f0" filter="url(#glow)"/>
+                </svg>
+            </div>
+            <p class="map-caption">Dari Sabang Sampai Merauke • Bersatu Dalam Kebhinekaan</p>
+        </section>
+
+        <!-- Kebudayaan Indonesia Section -->
+        <section class="nusantara-card culture-card">
+            <div class="card-crimson-accent"></div>
+            <h2 class="section-title">KERAGAMAN BUDAYA NUSANTARA</h2>
+            
+            <div class="culture-grid">
+                <div class="culture-item">
+                    <div class="culture-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=600&q=80" alt="Batik Indonesia" class="culture-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <h3>Batik & Tenun</h3>
+                    <p>Warisan kain kebanggaan bangsa dengan corak filosofis nan megah dari Sabang hingga Rote.</p>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Seni Tari Bali Kecak" class="culture-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <h3>Wayang & Seni Tari</h3>
+                    <p>Seni pertunjukan klasik abad ke abad seperti Tari Kecak, Pendet, Jaipong, dan Wayang Kulit.</p>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" alt="Musik Gamelan & Musik Tradisional" class="culture-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <h3>Gamelan & Alat Musik</h3>
+                    <p>Harmoni musik tradisional khas Nusantara yang diakui sebagai warisan budaya dunia (UNESCO).</p>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=600&q=80" alt="Rumah Adat Tradisional" class="culture-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <h3>Rumah Adat</h3>
+                    <p>Arsitektur mahakarya seperti Rumah Gadang, Tongkonan, Joglo, hingga Honai yang kaya makna.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Riwayat HUT RI Dari Tahun ke Tahun -->
+        <section class="nusantara-card history-card">
+            <div class="card-crimson-accent"></div>
+            <h2 class="section-title">REKAPITULASI HUT RI DARI TAHUN KE TAHUN</h2>
+            
+            <div class="table-container">
+                <table class="hut-table">
+                    <thead>
+                        <tr>
+                            <th>Tahun</th>
+                            <th>Usia Kemerdekaan</th>
+                            <th>Keterangan / Momen Bersejarah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**1945**</td>
+                            <td><span class="badge-year">0 Tahun</span></td>
+                            <td>Pembacaan Teks Proklamasi Kemerdekaan oleh Ir. Soekarno.</td>
+                        </tr>
+                        <tr>
+                            <td>**1970**</td>
+                            <td><span class="badge-year">HUT Ke-25</span></td>
+                            <td>Peringatan Perak (25 Tahun) Kemerdekaan Indonesia.</td>
+                        </tr>
+                        <tr>
+                            <td>**1995**</td>
+                            <td><span class="badge-year">HUT Ke-50</span></td>
+                            <td>Peringatan Emas (50 Tahun) Kemerdekaan Indonesia.</td>
+                        </tr>
+                        <tr>
+                            <td>**2020**</td>
+                            <td><span class="badge-year">HUT Ke-75</span></td>
+                            <td>Peringatan Berlian (75 Tahun) Kemerdekaan RI.</td>
+                        </tr>
+                        <tr>
+                            <td>**2024**</td>
+                            <td><span class="badge-year">HUT Ke-79</span></td>
+                            <td>Upacara Kemerdekaan Pertama di Ibu Kota Nusantara (IKN).</td>
+                        </tr>
+                        <tr>
+                            <td>**2025**</td>
+                            <td><span class="badge-year">HUT Ke-80</span></td>
+                            <td>Peringatan 80 Tahun Kemerdekaan Indonesia.</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td>**2026**</td>
+                            <td><span class="badge-year active">HUT Ke-81</span></td>
+                            <td>Tahun Berjalan Saat Ini (81 Tahun Indonesia Merdeka).</td>
+                        </tr>
+                        <tr>
+                            <td>**2045**</td>
+                            <td><span class="badge-year">HUT Ke-100</span></td>
+                            <td>Proyeksi 1 Abad Kemerdekaan (Indonesia Emas 2045).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="nusantara-footer">
+        <p>BHINNEKA TUNGGAL IKA • UNIFIED INDONESIA PORTAL</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
